@@ -28,7 +28,11 @@ class DeviceController {
         toggle.isOn.toggle()
         save()
     }
-    
+    func toggleAllDeviceOn(on: Bool) {
+        devices.forEach { $0.isOn = on }
+        save()
+        
+    }
     // MARK: - Persistence
     private var url: URL? {
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first

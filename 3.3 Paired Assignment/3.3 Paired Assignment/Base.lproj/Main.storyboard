@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1q-RI-5ZO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RdR-0F-61o">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LlD-Rw-kOa">
+            <objects>
+                <tabBarController id="RdR-0F-61o" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kN3-EW-Yrt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="H1q-RI-5ZO" kind="relationship" relationship="viewControllers" id="eVP-Lu-yBW"/>
+                        <segue destination="aZw-pm-Phu" kind="relationship" relationship="viewControllers" id="bMX-lj-rJ3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5oh-rT-R5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="-825"/>
+        </scene>
         <!--Smart Home-->
         <scene sceneID="aah-kp-85i">
             <objects>
@@ -69,12 +88,57 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="on3-Cd-6Ls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979.38931297709917" y="-88.028169014084511"/>
+            <point key="canvasLocation" x="955" y="-88"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--ToggleAllViewController-->
+        <scene sceneID="7KG-Ju-mTf">
+            <objects>
+                <viewController title="ToggleAllViewController" id="aZw-pm-Phu" customClass="ToggleAllDevicesViewController" customModule="__3_Paired_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdv-4o-qLd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xxY-7o-oSa">
+                                <rect key="frame" x="141.66666666666666" y="375.66666666666669" width="110" height="76.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw4-45-bi6">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Turn All On"/>
+                                        <connections>
+                                            <action selector="turnAllOnButtonTapped:" destination="aZw-pm-Phu" eventType="touchUpInside" id="Hb9-FH-ZKP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrq-wH-IrB">
+                                        <rect key="frame" x="0.0" y="42.333333333333314" width="110" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Turn All Off"/>
+                                        <connections>
+                                            <action selector="turnAllOffButtonTapped:" destination="aZw-pm-Phu" eventType="touchUpInside" id="PAH-LA-wZc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Sk-2h-P61"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xxY-7o-oSa" firstAttribute="centerX" secondItem="5Sk-2h-P61" secondAttribute="centerX" id="9DJ-2v-VTu"/>
+                            <constraint firstItem="xxY-7o-oSa" firstAttribute="centerY" secondItem="5Sk-2h-P61" secondAttribute="centerY" id="LrC-yK-EUt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Toggle Switch" selectedImage="lightswitch.on.square" catalog="system" id="lEW-hd-dXm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRf-YJ-noS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1792" y="-88"/>
+        </scene>
+        <!--Devices-->
         <scene sceneID="pCQ-g7-VGk">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CjM-ot-epd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H1q-RI-5ZO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Devices" image="hearingdevice.ear" catalog="system" id="FZ3-hT-A04"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RRc-FF-WWK">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -85,12 +149,13 @@
                         <segue destination="x8c-Q2-Wqv" kind="relationship" relationship="rootViewController" id="uwF-9Y-N4S"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CjM-ot-epd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="52.671755725190835" y="-88.028169014084511"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hearingdevice.ear" catalog="system" width="104" height="128"/>
+        <image name="lightswitch.on.square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

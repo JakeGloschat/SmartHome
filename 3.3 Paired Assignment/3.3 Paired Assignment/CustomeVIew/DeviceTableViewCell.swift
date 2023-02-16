@@ -27,10 +27,9 @@ class DeviceTableViewCell: UITableViewCell {
     // MARK: - Functions
     func updateViews(device: Device) {
         deviceNameLabel.text = device.name
+        switchToggle.isOn = device.isOn
     }
-    func toggleImage(toggle: Device) {
-        switchToggle.isOn = toggle.isOn
-    }
+   
     
     // MARK: - Actions
     

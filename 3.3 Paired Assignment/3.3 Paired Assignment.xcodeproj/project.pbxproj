@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23373017299ECA0C004861F5 /* ToggleAllDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23373016299ECA0C004861F5 /* ToggleAllDevicesViewController.swift */; };
+		23373019299ED1A1004861F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23373018299ED1A1004861F5 /* Constants.swift */; };
 		23DFD9E6299D70C200EFD35D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFD9E5299D70C200EFD35D /* AppDelegate.swift */; };
 		23DFD9E8299D70C200EFD35D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFD9E7299D70C200EFD35D /* SceneDelegate.swift */; };
 		23DFD9ED299D70C200EFD35D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DFD9EB299D70C200EFD35D /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23373016299ECA0C004861F5 /* ToggleAllDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAllDevicesViewController.swift; sourceTree = "<group>"; };
+		23373018299ED1A1004861F5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		23DFD9E2299D70C200EFD35D /* 3.3 Paired Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3.3 Paired Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23DFD9E5299D70C200EFD35D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DFD9E7299D70C200EFD35D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2337301A299ED6F8004861F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23DFD9FB299D744C00EFD35D /* Device.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2337301B299ED700004861F5 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				23DFD9FD299D76D300EFD35D /* DeviceController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		2337301C299ED715004861F5 /* Device Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23DFD9FF299D7BE900EFD35D /* DeviceTableViewController.swift */,
+				23373016299ECA0C004861F5 /* ToggleAllDevicesViewController.swift */,
+			);
+			path = "Device Controller";
+			sourceTree = "<group>";
+		};
+		2337301D299ED72C004861F5 /* CustomeVIew */ = {
+			isa = PBXGroup;
+			children = (
+				23DFDA01299D7EBE00EFD35D /* DeviceTableViewCell.swift */,
+			);
+			path = CustomeVIew;
+			sourceTree = "<group>";
+		};
 		23DFD9D9299D70C200EFD35D = {
 			isa = PBXGroup;
 			children = (
@@ -68,10 +105,11 @@
 				23DFD9EE299D70C300EFD35D /* Assets.xcassets */,
 				23DFD9F0299D70C300EFD35D /* LaunchScreen.storyboard */,
 				23DFD9F3299D70C300EFD35D /* Info.plist */,
-				23DFD9FB299D744C00EFD35D /* Device.swift */,
-				23DFD9FD299D76D300EFD35D /* DeviceController.swift */,
-				23DFD9FF299D7BE900EFD35D /* DeviceTableViewController.swift */,
-				23DFDA01299D7EBE00EFD35D /* DeviceTableViewCell.swift */,
+				2337301A299ED6F8004861F5 /* Model */,
+				2337301B299ED700004861F5 /* ModelController */,
+				2337301C299ED715004861F5 /* Device Controller */,
+				2337301D299ED72C004861F5 /* CustomeVIew */,
+				23373018299ED1A1004861F5 /* Constants.swift */,
 			);
 			path = "3.3 Paired Assignment";
 			sourceTree = "<group>";
@@ -148,11 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				23DFD9FC299D744C00EFD35D /* Device.swift in Sources */,
+				23373017299ECA0C004861F5 /* ToggleAllDevicesViewController.swift in Sources */,
 				23DFDA02299D7EBE00EFD35D /* DeviceTableViewCell.swift in Sources */,
 				23DFDA00299D7BE900EFD35D /* DeviceTableViewController.swift in Sources */,
 				23DFD9FE299D76D300EFD35D /* DeviceController.swift in Sources */,
 				23DFD9E6299D70C200EFD35D /* AppDelegate.swift in Sources */,
 				23DFD9E8299D70C200EFD35D /* SceneDelegate.swift in Sources */,
+				23373019299ED1A1004861F5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

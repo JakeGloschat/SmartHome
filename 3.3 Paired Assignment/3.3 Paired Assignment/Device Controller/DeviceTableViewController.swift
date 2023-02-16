@@ -11,7 +11,7 @@ class DeviceTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUpNotifications()
     }
     
     // MARK: - Table view data source
@@ -31,6 +31,21 @@ class DeviceTableViewController: UITableViewController {
     }
     
     // MARK: - Functions for UIAlert
+    func setUpNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(turnDevicesAllOn), name: Notification.Name(Constants.Notifications.turnAllOn), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(turnDevicesAllOff), name: Notification.Name(Constants.Notifications.turnAllOff), object: nil)
+        
+    }
+    @objc func turnDevicesAllOn() {
+        DeviceController.shared.toggleAllDeviceOn(on: true)
+        tableView.reloadData()
+        print("I work")
+    }
+    @objc func turnDevicesAllOff() {
+        DeviceController.shared.toggleAllDeviceOn(on: false)
+        tableView.reloadData()
+        print("I works")
+        }
     
     private func presentNewDeviceAlertController() {
         let alertController = UIAlertController(title: "New Device", message: "Create your new device, nerd!", preferredStyle: .alert)
